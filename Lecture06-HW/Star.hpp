@@ -16,7 +16,18 @@ public:
     void render()
     {
 
+
         glBegin(GL_POLYGON);
+        std::random_device rd;
+        std::mt19937 gen(rd());
+        std::uniform_real_distribution<float> dis(-1.0f, 1.0f);
+
+
+        float xPos = dis(gen);
+        float yPos = dis(gen);
+        float red = dis(gen);
+        float green = dis(gen);
+        float blue = dis(gen);
 
         glColor3f(red, green, blue);// ·£´ý »ö
 

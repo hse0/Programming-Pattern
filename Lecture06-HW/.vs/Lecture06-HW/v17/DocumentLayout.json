@@ -3,32 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\one\\Desktop\\Programming pattern\\Lecture06-HW\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{53949AB1-D12A-43D0-99C8-815B58F282A7}|Lecture06-HW.vcxproj|C:\\Users\\one\\Desktop\\Programming pattern\\Lecture06-HW\\MSList.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{53949AB1-D12A-43D0-99C8-815B58F282A7}|Lecture06-HW.vcxproj|solutionrelative:MSList.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{53949AB1-D12A-43D0-99C8-815B58F282A7}|Lecture06-HW.vcxproj|C:\\Users\\one\\Desktop\\Programming pattern\\Lecture06-HW\\MObject.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{53949AB1-D12A-43D0-99C8-815B58F282A7}|Lecture06-HW.vcxproj|solutionrelative:MObject.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{53949AB1-D12A-43D0-99C8-815B58F282A7}|Lecture06-HW.vcxproj|C:\\Users\\one\\Desktop\\Programming pattern\\Lecture06-HW\\Lecture06-HW.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{53949AB1-D12A-43D0-99C8-815B58F282A7}|Lecture06-HW.vcxproj|solutionrelative:Lecture06-HW.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53949AB1-D12A-43D0-99C8-815B58F282A7}|Lecture06-HW.vcxproj|C:\\Users\\one\\Desktop\\Programming pattern\\Lecture06-HW\\MSList.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{53949AB1-D12A-43D0-99C8-815B58F282A7}|Lecture06-HW.vcxproj|solutionrelative:MSList.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{53949AB1-D12A-43D0-99C8-815B58F282A7}|Lecture06-HW.vcxproj|C:\\Users\\one\\Desktop\\Programming pattern\\Lecture06-HW\\Star.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{53949AB1-D12A-43D0-99C8-815B58F282A7}|Lecture06-HW.vcxproj|solutionrelative:Star.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{53949AB1-D12A-43D0-99C8-815B58F282A7}|Lecture06-HW.vcxproj|C:\\Users\\one\\Desktop\\Programming pattern\\Lecture06-HW\\MSList.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{53949AB1-D12A-43D0-99C8-815B58F282A7}|Lecture06-HW.vcxproj|solutionrelative:MSList.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{53949AB1-D12A-43D0-99C8-815B58F282A7}|Lecture06-HW.vcxproj|C:\\Users\\one\\Desktop\\Programming pattern\\Lecture06-HW\\Star.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{53949AB1-D12A-43D0-99C8-815B58F282A7}|Lecture06-HW.vcxproj|solutionrelative:Star.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{53949AB1-D12A-43D0-99C8-815B58F282A7}|Lecture06-HW.vcxproj|C:\\Users\\one\\Desktop\\Programming pattern\\Lecture06-HW\\MObject.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{53949AB1-D12A-43D0-99C8-815B58F282A7}|Lecture06-HW.vcxproj|solutionrelative:MObject.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{53949AB1-D12A-43D0-99C8-815B58F282A7}|Lecture06-HW.vcxproj|C:\\Users\\one\\Desktop\\Programming pattern\\Lecture06-HW\\MObject.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{53949AB1-D12A-43D0-99C8-815B58F282A7}|Lecture06-HW.vcxproj|solutionrelative:MObject.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53949AB1-D12A-43D0-99C8-815B58F282A7}|Lecture06-HW.vcxproj|C:\\Users\\one\\Desktop\\Programming pattern\\Lecture06-HW\\MSList.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{53949AB1-D12A-43D0-99C8-815B58F282A7}|Lecture06-HW.vcxproj|solutionrelative:MSList.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,72 +54,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MSList.h",
-              "DocumentMoniker": "C:\\Users\\one\\Desktop\\Programming pattern\\Lecture06-HW\\MSList.h",
-              "RelativeDocumentMoniker": "MSList.h",
-              "ToolTip": "C:\\Users\\one\\Desktop\\Programming pattern\\Lecture06-HW\\MSList.h",
-              "RelativeToolTip": "MSList.h",
-              "ViewState": "AQIAABgAAAAAAAAAAADwvwAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-04-17T13:03:38.184Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Star.cpp",
-              "DocumentMoniker": "C:\\Users\\one\\Desktop\\Programming pattern\\Lecture06-HW\\Star.cpp",
-              "RelativeDocumentMoniker": "Star.cpp",
-              "ToolTip": "C:\\Users\\one\\Desktop\\Programming pattern\\Lecture06-HW\\Star.cpp",
-              "RelativeToolTip": "Star.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAADwvwEAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-04-17T11:58:12.971Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "MSList.cpp",
               "DocumentMoniker": "C:\\Users\\one\\Desktop\\Programming pattern\\Lecture06-HW\\MSList.cpp",
               "RelativeDocumentMoniker": "MSList.cpp",
               "ToolTip": "C:\\Users\\one\\Desktop\\Programming pattern\\Lecture06-HW\\MSList.cpp",
               "RelativeToolTip": "MSList.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "ViewState": "AQIAACEAAAAAAAAAAAAAAAgAAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-04-17T11:54:39.486Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Lecture06-HW.cpp",
-              "DocumentMoniker": "C:\\Users\\one\\Desktop\\Programming pattern\\Lecture06-HW\\Lecture06-HW.cpp",
-              "RelativeDocumentMoniker": "Lecture06-HW.cpp",
-              "ToolTip": "C:\\Users\\one\\Desktop\\Programming pattern\\Lecture06-HW\\Lecture06-HW.cpp",
-              "RelativeToolTip": "Lecture06-HW.cpp",
-              "ViewState": "AQIAAEsAAAAAAAAAAAAAAAAAAAAkAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-04-17T11:37:17.537Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Star.hpp",
-              "DocumentMoniker": "C:\\Users\\one\\Desktop\\Programming pattern\\Lecture06-HW\\Star.hpp",
-              "RelativeDocumentMoniker": "Star.hpp",
-              "ToolTip": "C:\\Users\\one\\Desktop\\Programming pattern\\Lecture06-HW\\Star.hpp",
-              "RelativeToolTip": "Star.hpp",
-              "ViewState": "AQIAAB4AAAAAAAAAAAAAACYAAAAVAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-04-17T11:49:20.254Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "MObject.cpp",
               "DocumentMoniker": "C:\\Users\\one\\Desktop\\Programming pattern\\Lecture06-HW\\MObject.cpp",
               "RelativeDocumentMoniker": "MObject.cpp",
@@ -132,15 +80,68 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 0,
+              "Title": "Lecture06-HW.cpp",
+              "DocumentMoniker": "C:\\Users\\one\\Desktop\\Programming pattern\\Lecture06-HW\\Lecture06-HW.cpp",
+              "RelativeDocumentMoniker": "Lecture06-HW.cpp",
+              "ToolTip": "C:\\Users\\one\\Desktop\\Programming pattern\\Lecture06-HW\\Lecture06-HW.cpp",
+              "RelativeToolTip": "Lecture06-HW.cpp",
+              "ViewState": "AQIAACQAAAAAAAAAAAAgwDkAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-04-17T11:37:17.537Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Star.hpp",
+              "DocumentMoniker": "C:\\Users\\one\\Desktop\\Programming pattern\\Lecture06-HW\\Star.hpp",
+              "RelativeDocumentMoniker": "Star.hpp",
+              "ToolTip": "C:\\Users\\one\\Desktop\\Programming pattern\\Lecture06-HW\\Star.hpp",
+              "RelativeToolTip": "Star.hpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-04-17T11:49:20.254Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Star.cpp",
+              "DocumentMoniker": "C:\\Users\\one\\Desktop\\Programming pattern\\Lecture06-HW\\Star.cpp",
+              "RelativeDocumentMoniker": "Star.cpp",
+              "ToolTip": "C:\\Users\\one\\Desktop\\Programming pattern\\Lecture06-HW\\Star.cpp",
+              "RelativeToolTip": "Star.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-04-17T11:58:12.971Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "MObject.h",
               "DocumentMoniker": "C:\\Users\\one\\Desktop\\Programming pattern\\Lecture06-HW\\MObject.h",
               "RelativeDocumentMoniker": "MObject.h",
               "ToolTip": "C:\\Users\\one\\Desktop\\Programming pattern\\Lecture06-HW\\MObject.h",
               "RelativeToolTip": "MObject.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAXAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAACAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-04-17T11:47:03.876Z"
+              "WhenOpened": "2024-04-17T11:47:03.876Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MSList.h",
+              "DocumentMoniker": "C:\\Users\\one\\Desktop\\Programming pattern\\Lecture06-HW\\MSList.h",
+              "RelativeDocumentMoniker": "MSList.h",
+              "ToolTip": "C:\\Users\\one\\Desktop\\Programming pattern\\Lecture06-HW\\MSList.h",
+              "RelativeToolTip": "MSList.h",
+              "ViewState": "AQIAADMAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-04-17T13:03:38.184Z",
+              "EditorCaption": ""
             }
           ]
         }
