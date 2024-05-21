@@ -1,161 +1,219 @@
 #pragma comment(lib, "Opengl32.lib")
 #include <GLFW/glfw3.h>
-#include <GL/gl.h>
+#include <iostream>
 #include <cmath>
 
-const double PI = 3.14159265358979323846;
+float moveFactor = 0.0f;
+float scaleFactor = 1.0f;
+const float M_PI = 3.14159265358979323846f;
 
-int main() {
-    // Initialize GLFW
+void errorCallback(int error, const char* description)
+{
+    std::cerr << "GLFW Error: " << description << std::endl;
+}
+
+void keyCallback(GLFWwindow* window, int key, int scancode, int action, int mods)
+{
+    if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS)
+    {
+        glfwSetWindowShouldClose(window, GLFW_TRUE);
+    }
+    if (key == GLFW_KEY_UP && action == GLFW_PRESS)
+    {
+        moveFactor += 0.01f;
+    }
+    if (key == GLFW_KEY_RIGHT && action == GLFW_PRESS)
+    {
+        scaleFactor += 0.1f;
+    }
+}
+
+int setVertexRotation(float x, float y, float angle_degree)
+{ 
+    float angle = angle_degree / 180 * M_PI;
+    glVertex2f(x * cos(angle) - (y * sin(angle)), x * sin(angle) + (y * cos(angle)));
+    return 0;
+}
+
+int setVertexEarthRotation(float x, float y, float orbit_angle_degree, float rotate_angle_degree, float sun_center_x, float sun_center_y, float orbit_radius)
+{ 
+    float orbit_angle = orbit_angle_degree * M_PI / 180;
+    float rotate_angle = rotate_angle_degree * M_PI / 180;
+    float orbit_x = sun_center_x + orbit_radius * cos(orbit_angle);
+    float orbit_y = sun_center_y + orbit_radius * sin(orbit_angle);
+    glVertex2f(orbit_x + x * cos(rotate_angle) - (y * sin(rotate_angle)), orbit_y + x * sin(rotate_angle) + (y * cos(rotate_angle)));
+    return 0;
+}
+
+int setVertexStarRotation(float x, float y, float orbit_angle_degree, float rotate_angle_degree, float earth_center_x, float earth_center_y, float orbit_radius)
+{ 
+    float orbit_angle = orbit_angle_degree * M_PI / 180;
+    float rotate_angle = rotate_angle_degree * M_PI / 180;
+    float orbit_x = earth_center_x + orbit_radius * cos(orbit_angle);
+    float orbit_y = earth_center_y + orbit_radius * sin(orbit_angle);
+    glVertex2f(orbit_x + x * cos(rotate_angle) - (y * sin(rotate_angle)), orbit_y + x * sin(rotate_angle) + (y * cos(rotate_angle)));
+    return 0;
+}
+
+float SunAngle = 0;
+float Big_angle = 140;
+float Small_angle = 240;
+float EarthRotateAngle = 0;
+float EarthOrbitAngle = 0;
+float StarRotationAngle = 0;
+float StarOrbitAngle = 0;
+
+float sunRotation = 360.0f / 30.0f;
+float EarthRotation = 360.0f / 10.0f; 
+float EarthOrbit= 360.0f / 60.0f;
+float StarRotateOrbit = 360.0f / 3.0f;
+double previousTime = 0.0;
+
+int render(float deltaTime)
+{
+    glBegin(GL_POLYGON);
+    glColor3ub(255, 217, 102);
+    double radius = 0.3;
+    for (int i = 0; i < 360; i++)
+    {
+        double x = radius * cos(i * M_PI / 180);
+        double y = radius * sin(i * M_PI / 180);
+        setVertexRotation(x, y, SunAngle);
+    }
+    glEnd();
+
+    glLineWidth(1.0f);
+    glBegin(GL_LINE_LOOP);
+    glColor3f(0.77f, 0.35f, 0.06f);
+    double rad = 0.3;
+    double x[360], y[360];
+    for (int i = 0; i < 360; i++)
+    {
+        double angle = i * M_PI / 180;
+        x[i] = rad * cos(angle);
+        y[i] = rad * sin(angle);
+    }
+    for (int i = 0; i < 359; i++)
+    {
+        setVertexRotation(x[i], y[i], SunAngle);
+        setVertexRotation(x[i + 1], y[i + 1], SunAngle);
+    }
+    glEnd();
+
+    glBegin(GL_POLYGON);
+    glColor3ub(255, 230, 153);
+    float big_radius = 0.1;
+    for (int i = 0; i < 360; i++)
+    {
+        double x = big_radius * cos(i * M_PI / 180);
+        double y = big_radius * sin(i * M_PI / 180);
+        setVertexRotation(x + 0.13, y + 0.13, Big_angle);
+    }
+    glEnd();
+
+    glBegin(GL_POLYGON);
+    glColor3ub(255, 192, 0);
+    float small_radius = 0.05;
+    for (int i = 0; i < 360; i++)
+    {
+        double x = small_radius * cos(i * M_PI / 180);
+        double y = small_radius * 0.3 * sin(i * M_PI / 180);
+        setVertexRotation(x + 0.008, y + 0.27, Small_angle);
+    }
+    glEnd();
+
+    float sun_center_x = 0.0f;
+    float sun_center_y = 0.0f;
+    float orbit_radius = 0.6f;
+
+    glBegin(GL_POLYGON);
+    glColor3ub(91, 155, 213);
+    setVertexEarthRotation(-0.05f, -0.05f, EarthOrbitAngle, EarthRotateAngle, sun_center_x, sun_center_y, orbit_radius);
+    setVertexEarthRotation(-0.05f, 0.05f, EarthOrbitAngle, EarthRotateAngle, sun_center_x, sun_center_y, orbit_radius);
+    setVertexEarthRotation(0.05f, 0.05f, EarthOrbitAngle, EarthRotateAngle, sun_center_x, sun_center_y, orbit_radius);
+    setVertexEarthRotation(0.05f, -0.05f, EarthOrbitAngle, EarthRotateAngle, sun_center_x, sun_center_y, orbit_radius);
+    glEnd();
+
+    glLineWidth(1.0f);
+    glBegin(GL_LINE_LOOP);
+    glColor3f(0.0f, 0.0f, 0.0f);
+    setVertexEarthRotation(-0.05f, -0.05f, EarthOrbitAngle, EarthRotateAngle, sun_center_x, sun_center_y, orbit_radius);
+    setVertexEarthRotation(-0.05f, 0.05f, EarthOrbitAngle, EarthRotateAngle, sun_center_x, sun_center_y, orbit_radius);
+    setVertexEarthRotation(0.05f, 0.05f, EarthOrbitAngle, EarthRotateAngle, sun_center_x, sun_center_y, orbit_radius);
+    setVertexEarthRotation(0.05f, -0.05f, EarthOrbitAngle, EarthRotateAngle, sun_center_x, sun_center_y, orbit_radius);
+    glEnd();
+
+    float earth_center_x = sun_center_x + orbit_radius * cos(EarthOrbitAngle * M_PI / 180);
+    float earth_center_y = sun_center_y + orbit_radius * sin(EarthOrbitAngle * M_PI / 180);
+    float moon_orbit_radius = 0.15f;
+    float star_radius = 0.05f;
+
+    glBegin(GL_TRIANGLE_FAN);
+    glColor3ub(255, 242, 0);
+    setVertexStarRotation(0.0f, 0.0f, StarOrbitAngle, StarRotationAngle, earth_center_x, earth_center_y, moon_orbit_radius);
+    for (int i = 0; i < 360; i += 72) {
+        float x = star_radius * cos(i * M_PI / 180);
+        float y = star_radius * sin(i * M_PI / 180);
+        setVertexStarRotation(x, y, StarOrbitAngle, i + StarRotationAngle, earth_center_x, earth_center_y, moon_orbit_radius);
+        setVertexStarRotation(x * 0.5f, y * 0.5f, StarOrbitAngle, i + 36 + StarRotationAngle, earth_center_x, earth_center_y, moon_orbit_radius);
+    }
+    setVertexStarRotation(star_radius, 0.0f, StarOrbitAngle, StarRotationAngle, earth_center_x, earth_center_y, moon_orbit_radius);
+    glEnd();
+
+    glLineWidth(1.0f);
+    glBegin(GL_LINES);
+    glColor3f(0.0f, 0.0f, 0.0f);
+    for (int i = 0; i < 360; i += 72) {
+        float x = star_radius * cos(i * M_PI / 180);
+        float y = star_radius * sin(i * M_PI / 180);
+        setVertexStarRotation(x * 0.5f, y * 0.5f, StarOrbitAngle, i - 36 + StarRotationAngle, earth_center_x, earth_center_y, moon_orbit_radius);
+        setVertexStarRotation(x, y, StarOrbitAngle, i + StarRotationAngle, earth_center_x, earth_center_y, moon_orbit_radius);
+        setVertexStarRotation(x, y, StarOrbitAngle, i + StarRotationAngle, earth_center_x, earth_center_y, moon_orbit_radius);
+        setVertexStarRotation(x * 0.5f, y * 0.5f, StarOrbitAngle, i + 36 + StarRotationAngle, earth_center_x, earth_center_y, moon_orbit_radius);
+    }
+    glEnd();
+
+    SunAngle -= sunRotation * deltaTime;
+    Big_angle -= sunRotation * deltaTime;
+    Small_angle -= sunRotation * deltaTime;
+    EarthOrbitAngle += EarthOrbit * deltaTime;
+    EarthRotateAngle += EarthRotation * deltaTime;
+    StarRotationAngle += StarRotateOrbit * deltaTime;
+    StarOrbitAngle -= StarRotateOrbit * deltaTime;
+
+    return 0;
+}
+
+int main(void)
+{
     if (!glfwInit())
         return -1;
 
-    // Create a windowed mode window and its OpenGL context
-    GLFWwindow* window = glfwCreateWindow(900, 700, "Canvas Rotation", NULL, NULL);
-    if (!window) {
+    GLFWwindow* window;
+    window = glfwCreateWindow(1000, 1000, "MuSoeunEngine", NULL, NULL);
+
+    if (!window)
+    {
         glfwTerminate();
         return -1;
     }
 
-    // Make the window's context current
     glfwMakeContextCurrent(window);
+    glfwSetErrorCallback(errorCallback);
+    glfwSetKeyCallback(window, keyCallback);
+    previousTime = glfwGetTime(); 
 
-    // Loop until the user closes the window
-    while (!glfwWindowShouldClose(window)) {
-        // Clear the buffer
-        glClear(GL_COLOR_BUFFER_BIT);
-
-        // Get the size of the window
-        int width, height;
-        glfwGetFramebufferSize(window, &width, &height);
-
-        // Set up viewport
-        glViewport(0, 0, width, height);
-
-        // Set up projection matrix
-        glMatrixMode(GL_PROJECTION);
-        glLoadIdentity();
-        glOrtho(0, width, height, 0, -1, 1);
-
-        // Set up modelview matrix
-        glMatrixMode(GL_MODELVIEW);
-        glLoadIdentity();
-
-        // Center coordinates
-        double centerX = width / 2.0;
-        double centerY = height / 2.0;
-
-        // Distance from center to blue rectangle
-        double blueRectDistance = 300;
-
-        // Distance from blue rectangle to grey rectangle
-        double greyRectDistance = 60; // Increased distance from blue rectangle
-
-        // Initial angles
-        static double redRect = 0;
-        static double blueRect = 0;
-        static double greyRect = 0;
-        static double smallCircleRotation = 0; // 회전 각도
-
-        // Drawing code
-        // Red circle
-        glColor3ub(255, 217, 102); // RGB color setting
-        glBegin(GL_TRIANGLE_FAN);
-        for (int i = 0; i < 360; i++) {
-            double theta = i * PI / 180.0;
-            glVertex2f(centerX + 25.0 * cos(theta), centerY + 25.0 * sin(theta));
-        }
-        glEnd();
-
-        // Draw small circle inside the big circle
-        glColor3ub(255, 230, 153); // RGB color setting for the small circle
-        glBegin(GL_TRIANGLE_FAN);
-        for (int i = 0; i < 360; i++) {
-            double theta = i * PI / 180.0;
-            glVertex2f(centerX - 10.0 + 10.0 * cos(theta), centerY + 10.0 * sin(theta)); // Adjust the radius accordingly
-        }
-        glEnd();
-
-        // 작은 원을 큰 원 아래쪽에 배치하고 회전 변환 추가
-        glPushMatrix();
-        double smallCircleCenterX = centerX + 15.0; // 작은 원의 중심 X 좌표
-        double smallCircleCenterY = centerY + 12.0; // 작은 원의 중심 Y 좌표 (큰 원 아래쪽)
-
-        glTranslatef(smallCircleCenterX, smallCircleCenterY, 0); // 회전 중심을 작은 원의 중심으로 이동
-        glRotatef(150.0, 0.0, 0.0, 1.0); // 30도 시계 반대 방향으로 회전
-
-        glColor3ub(255, 230, 153); // 작은 원의 색 설정
-        glBegin(GL_TRIANGLE_FAN);
-        for (int i = 360; i >= 0; i--) { // 각도를 감소시켜 반대 방향으로 회전
-            double theta = i * PI / 180.0; // 각도 계산
-            glVertex2f(7.0 * cos(theta), 3.0 * sin(theta)); // 회전 중심을 기준으로 좌표 계산
-        }
-        glEnd();
-
-        glPopMatrix(); // 이전 행렬로 복원
-
-        // Draw outline for the big circle
-        glColor3ub(197, 90, 17); // RGB color setting for the outline
-        glBegin(GL_LINE_LOOP);
-        for (int i = 0; i < 360; i++) {
-            double theta = i * PI / 180.0;
-            glVertex2f(centerX + 25.0 * cos(theta), centerY + 25.0 * sin(theta));
-        }
-        glEnd();
-
-        // Blue rectangle
-        glColor3f(0.0, 0.0, 1.0);
-        glPushMatrix();
-        glTranslatef(centerX, centerY, 0.0); // Blue rectangle's initial position at the center
-        glRotatef(-blueRect * 180.0 / PI, 0.0, 0.0, 1.0);
-        glTranslatef(-blueRectDistance, 0.0, 0.0); // Blue rectangle's distance from the center
-        glBegin(GL_QUADS);
-        glVertex2f(-25.0, -25.0);
-        glVertex2f(25.0, -25.0);
-        glVertex2f(25.0, 25.0);
-        glVertex2f(-25.0, 25.0);
-        glEnd();
-        glPopMatrix();
-
-        // Draw star
-        glColor3ub(255, 242, 0); // Yellow color
-        glPushMatrix();
-        glTranslatef(centerX, centerY, 0.0);
-        glRotatef(-blueRect * 180.0 / PI, 0.0, 0.0, 1.0);
-        glTranslatef(-blueRectDistance - greyRectDistance, 0.0, 0.0);
-        glRotatef(greyRect * 180.0 / PI, 0.0, 0.0, -1.0);
-
-        glBegin(GL_TRIANGLE_FAN);
-        glVertex2f(0.0, 0.0); // Center
-        for (int i = 0; i < 5; ++i) { // Five vertices of the star
-            double angle = (4 * PI / 5) * i + PI / 2; // Adjust angle
-            double x = 30 * cos(angle); // Adjust size
-            double y = 30 * sin(angle); // Adjust size
-            glVertex2d(x, y);
-            angle += (2 * PI / 5); // Move to the next vertex
-            x = 7.5 * cos(angle + PI / 5); // Adjust size and angle
-            y = 7.5 * sin(angle + PI / 5); // Adjust size and angle
-            glVertex2d(x, y);
-        }
-        glEnd();
-
-        glPopMatrix();
-
-        // Update angles
-        redRect += PI / 100;
-        blueRect += PI / 200;
-        greyRect -= PI / 200; // Rotate the grey rectangle clockwise around the center
-        smallCircleRotation += 1.0; // 작은 원의 회전 각도 업데이트 (시계 반대 방향으로 회전)
-
-        // Swap front and back buffers
-        glfwSwapBuffers(window);
-
-        // Poll for and process events
+    while (!glfwWindowShouldClose(window))
+    {
+        double currentTime = glfwGetTime(); 
+        float deltaTime = static_cast<float>(currentTime - previousTime); 
+        previousTime = currentTime; 
         glfwPollEvents();
+        glClearColor(0.0f, 0.0f, 1.0f, 1.0f);
+        glClear(GL_COLOR_BUFFER_BIT);
+        render(deltaTime);
+        glfwSwapBuffers(window);
     }
-
-    // Terminate GLFW
     glfwTerminate();
-
     return 0;
 }

@@ -2,23 +2,16 @@
 C:\Users\one\Desktop\Programming pattern\Lecture10-HW\packages\glfw.3.4.0\build\native\include\GLFW\glfw3.h(3235,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
   (소스 파일 'Lecture10-HW.cpp'을(를) 컴파일하는 중)
   
-C:\Users\one\Desktop\Programming pattern\Lecture10-HW\Lecture10-HW.cpp(66,61): warning C4244: '인수': 'double'에서 'GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\one\Desktop\Programming pattern\Lecture10-HW\Lecture10-HW.cpp(66,32): warning C4244: '인수': 'double'에서 'GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\one\Desktop\Programming pattern\Lecture10-HW\Lecture10-HW.cpp(75,68): warning C4244: '인수': 'double'에서 'GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\one\Desktop\Programming pattern\Lecture10-HW\Lecture10-HW.cpp(75,39): warning C4244: '인수': 'double'에서 'GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\one\Desktop\Programming pattern\Lecture10-HW\Lecture10-HW.cpp(84,42): warning C4244: '인수': 'double'에서 'GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\one\Desktop\Programming pattern\Lecture10-HW\Lecture10-HW.cpp(84,22): warning C4244: '인수': 'double'에서 'GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\one\Desktop\Programming pattern\Lecture10-HW\Lecture10-HW.cpp(91,46): warning C4244: '인수': 'double'에서 'GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\one\Desktop\Programming pattern\Lecture10-HW\Lecture10-HW.cpp(91,28): warning C4244: '인수': 'double'에서 'GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\one\Desktop\Programming pattern\Lecture10-HW\Lecture10-HW.cpp(102,61): warning C4244: '인수': 'double'에서 'GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\one\Desktop\Programming pattern\Lecture10-HW\Lecture10-HW.cpp(102,32): warning C4244: '인수': 'double'에서 'GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\one\Desktop\Programming pattern\Lecture10-HW\Lecture10-HW.cpp(109,31): warning C4244: '인수': 'double'에서 'GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\one\Desktop\Programming pattern\Lecture10-HW\Lecture10-HW.cpp(109,22): warning C4244: '인수': 'double'에서 'GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\one\Desktop\Programming pattern\Lecture10-HW\Lecture10-HW.cpp(110,37): warning C4244: '인수': 'double'에서 'GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\one\Desktop\Programming pattern\Lecture10-HW\Lecture10-HW.cpp(111,22): warning C4244: '인수': 'double'에서 'GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\one\Desktop\Programming pattern\Lecture10-HW\Lecture10-HW.cpp(123,31): warning C4244: '인수': 'double'에서 'GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\one\Desktop\Programming pattern\Lecture10-HW\Lecture10-HW.cpp(123,22): warning C4244: '인수': 'double'에서 'GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\one\Desktop\Programming pattern\Lecture10-HW\Lecture10-HW.cpp(124,37): warning C4244: '인수': 'double'에서 'GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\one\Desktop\Programming pattern\Lecture10-HW\Lecture10-HW.cpp(125,40): warning C4244: '인수': 'double'에서 'GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\one\Desktop\Programming pattern\Lecture10-HW\Lecture10-HW.cpp(126,36): warning C4244: '인수': 'double'에서 'GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\one\Desktop\Programming pattern\Lecture10-HW\Lecture10-HW.cpp(81,30): warning C4244: '인수': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\one\Desktop\Programming pattern\Lecture10-HW\Lecture10-HW.cpp(81,27): warning C4244: '인수': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\one\Desktop\Programming pattern\Lecture10-HW\Lecture10-HW.cpp(98,36): warning C4244: '인수': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\one\Desktop\Programming pattern\Lecture10-HW\Lecture10-HW.cpp(98,30): warning C4244: '인수': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\one\Desktop\Programming pattern\Lecture10-HW\Lecture10-HW.cpp(99,44): warning C4244: '인수': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\one\Desktop\Programming pattern\Lecture10-HW\Lecture10-HW.cpp(99,34): warning C4244: '인수': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\one\Desktop\Programming pattern\Lecture10-HW\Lecture10-HW.cpp(105,22): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다.
+C:\Users\one\Desktop\Programming pattern\Lecture10-HW\Lecture10-HW.cpp(110,39): warning C4244: '인수': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\one\Desktop\Programming pattern\Lecture10-HW\Lecture10-HW.cpp(110,29): warning C4244: '인수': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\one\Desktop\Programming pattern\Lecture10-HW\Lecture10-HW.cpp(116,24): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다.
+C:\Users\one\Desktop\Programming pattern\Lecture10-HW\Lecture10-HW.cpp(121,40): warning C4244: '인수': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\one\Desktop\Programming pattern\Lecture10-HW\Lecture10-HW.cpp(121,29): warning C4244: '인수': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   Lecture10-HW.vcxproj -> C:\Users\one\Desktop\Programming pattern\Lecture10-HW\x64\Debug\Lecture10-HW.exe
