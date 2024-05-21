@@ -63,7 +63,7 @@ float EarthOrbitAngle = 0;
 float StarRotationAngle = 0;
 float StarOrbitAngle = 0;
 
-float sunRotation = 360.0f / 30.0f;
+float SunRotation = 360.0f / 30.0f;
 float EarthRotation = 360.0f / 10.0f; 
 float EarthOrbit= 360.0f / 60.0f;
 float StarRotateOrbit = 360.0f / 3.0f;
@@ -84,7 +84,7 @@ int render(float deltaTime)
 
     glLineWidth(1.0f);
     glBegin(GL_LINE_LOOP);
-    glColor3f(0.77f, 0.35f, 0.06f);
+    glColor3ub(210, 99, 26);
     double rad = 0.2;
     double x[360], y[360];
     for (int i = 0; i < 360; i++)
@@ -128,54 +128,54 @@ int render(float deltaTime)
 
     glBegin(GL_POLYGON);
     glColor3ub(91, 155, 213);
-    setVertexEarthRotation(-0.05f, -0.05f, EarthOrbitAngle, EarthRotateAngle, sun_center_x, sun_center_y, orbit_radius);
-    setVertexEarthRotation(-0.05f, 0.05f, EarthOrbitAngle, EarthRotateAngle, sun_center_x, sun_center_y, orbit_radius);
-    setVertexEarthRotation(0.05f, 0.05f, EarthOrbitAngle, EarthRotateAngle, sun_center_x, sun_center_y, orbit_radius);
-    setVertexEarthRotation(0.05f, -0.05f, EarthOrbitAngle, EarthRotateAngle, sun_center_x, sun_center_y, orbit_radius);
+    setVertexEarthRotation(-0.02f, -0.02f, EarthOrbitAngle, EarthRotateAngle, sun_center_x, sun_center_y, orbit_radius);
+    setVertexEarthRotation(-0.02f, 0.02f, EarthOrbitAngle, EarthRotateAngle, sun_center_x, sun_center_y, orbit_radius);
+    setVertexEarthRotation(0.02f, 0.02f, EarthOrbitAngle, EarthRotateAngle, sun_center_x, sun_center_y, orbit_radius);
+    setVertexEarthRotation(0.02f, -0.02f, EarthOrbitAngle, EarthRotateAngle, sun_center_x, sun_center_y, orbit_radius);
     glEnd();
 
-    glLineWidth(1.0f);
+    glLineWidth(2.0f);
     glBegin(GL_LINE_LOOP);
     glColor3f(0.0f, 0.0f, 0.0f);
-    setVertexEarthRotation(-0.05f, -0.05f, EarthOrbitAngle, EarthRotateAngle, sun_center_x, sun_center_y, orbit_radius);
-    setVertexEarthRotation(-0.05f, 0.05f, EarthOrbitAngle, EarthRotateAngle, sun_center_x, sun_center_y, orbit_radius);
-    setVertexEarthRotation(0.05f, 0.05f, EarthOrbitAngle, EarthRotateAngle, sun_center_x, sun_center_y, orbit_radius);
-    setVertexEarthRotation(0.05f, -0.05f, EarthOrbitAngle, EarthRotateAngle, sun_center_x, sun_center_y, orbit_radius);
+    setVertexEarthRotation(-0.02f, -0.02f, EarthOrbitAngle, EarthRotateAngle, sun_center_x, sun_center_y, orbit_radius);
+    setVertexEarthRotation(-0.02f, 0.02f, EarthOrbitAngle, EarthRotateAngle, sun_center_x, sun_center_y, orbit_radius);
+    setVertexEarthRotation(0.02f, 0.02f, EarthOrbitAngle, EarthRotateAngle, sun_center_x, sun_center_y, orbit_radius);
+    setVertexEarthRotation(0.02f, -0.02f, EarthOrbitAngle, EarthRotateAngle, sun_center_x, sun_center_y, orbit_radius);
     glEnd();
 
     float earth_center_x = sun_center_x + orbit_radius * cos(EarthOrbitAngle * M_PI / 180);
     float earth_center_y = sun_center_y + orbit_radius * sin(EarthOrbitAngle * M_PI / 180);
-    float moon_orbit_radius = 0.15f;
+    float Star_orbit_radius = 0.15f;
     float star_radius = 0.05f;
 
     glBegin(GL_TRIANGLE_FAN);
     glColor3ub(255, 242, 0);
-    setVertexStarRotation(0.0f, 0.0f, StarOrbitAngle, StarRotationAngle, earth_center_x, earth_center_y, moon_orbit_radius);
+    setVertexStarRotation(0.0f, 0.0f, StarOrbitAngle, StarRotationAngle, earth_center_x, earth_center_y, Star_orbit_radius);
     for (int i = 0; i < 360; i += 72) {
         float x = star_radius * cos(i * M_PI / 180);
         float y = star_radius * sin(i * M_PI / 180);
-        setVertexStarRotation(x, y, StarOrbitAngle, i + StarRotationAngle, earth_center_x, earth_center_y, moon_orbit_radius);
-        setVertexStarRotation(x * 0.5f, y * 0.5f, StarOrbitAngle, i + 36 + StarRotationAngle, earth_center_x, earth_center_y, moon_orbit_radius);
+        setVertexStarRotation(x, y, StarOrbitAngle, i + StarRotationAngle, earth_center_x, earth_center_y, Star_orbit_radius);
+        setVertexStarRotation(x * 0.4f, y * 0.4f, StarOrbitAngle, i + 36 + StarRotationAngle, earth_center_x, earth_center_y, Star_orbit_radius);
     }
-    setVertexStarRotation(star_radius, 0.0f, StarOrbitAngle, StarRotationAngle, earth_center_x, earth_center_y, moon_orbit_radius);
+    setVertexStarRotation(star_radius, 0.0f, StarOrbitAngle, StarRotationAngle, earth_center_x, earth_center_y, Star_orbit_radius);
     glEnd();
 
-    glLineWidth(1.0f);
+    glLineWidth(0.8f);
     glBegin(GL_LINES);
     glColor3f(0.0f, 0.0f, 0.0f);
     for (int i = 0; i < 360; i += 72) {
         float x = star_radius * cos(i * M_PI / 180);
         float y = star_radius * sin(i * M_PI / 180);
-        setVertexStarRotation(x * 0.5f, y * 0.5f, StarOrbitAngle, i - 36 + StarRotationAngle, earth_center_x, earth_center_y, moon_orbit_radius);
-        setVertexStarRotation(x, y, StarOrbitAngle, i + StarRotationAngle, earth_center_x, earth_center_y, moon_orbit_radius);
-        setVertexStarRotation(x, y, StarOrbitAngle, i + StarRotationAngle, earth_center_x, earth_center_y, moon_orbit_radius);
-        setVertexStarRotation(x * 0.5f, y * 0.5f, StarOrbitAngle, i + 36 + StarRotationAngle, earth_center_x, earth_center_y, moon_orbit_radius);
+        setVertexStarRotation(x * 0.4f, y * 0.4f, StarOrbitAngle, i - 45 + StarRotationAngle, earth_center_x, earth_center_y, Star_orbit_radius);
+        setVertexStarRotation(x, y, StarOrbitAngle, i + StarRotationAngle, earth_center_x, earth_center_y, Star_orbit_radius);
+        setVertexStarRotation(x, y, StarOrbitAngle, i + StarRotationAngle, earth_center_x, earth_center_y, Star_orbit_radius);
+        setVertexStarRotation(x * 0.4f, y * 0.4f, StarOrbitAngle, i + 45 + StarRotationAngle, earth_center_x, earth_center_y, Star_orbit_radius);
     }
     glEnd();
 
-    SunAngle -= sunRotation * deltaTime;
-    Big_angle -= sunRotation * deltaTime;
-    Small_angle -= sunRotation * deltaTime;
+    SunAngle -= SunRotation * deltaTime;
+    Big_angle -= SunRotation * deltaTime;
+    Small_angle -= SunRotation * deltaTime;
     EarthOrbitAngle += EarthOrbit * deltaTime;
     EarthRotateAngle += EarthRotation * deltaTime;
     StarRotationAngle += StarRotateOrbit * deltaTime;
