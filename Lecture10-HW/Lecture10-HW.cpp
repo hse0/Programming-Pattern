@@ -56,7 +56,7 @@ int setVertexStarRotation(float x, float y, float orbit_angle_degree, float rota
 }
 
 float SunAngle = 0;
-float Big_angle = 140;
+float Big_angle = 130;
 float Small_angle = 240;
 float EarthRotateAngle = 0;
 float EarthOrbitAngle = 0;
@@ -73,7 +73,7 @@ int render(float deltaTime)
 {
     glBegin(GL_POLYGON);
     glColor3ub(255, 217, 102);
-    double radius = 0.3;
+    double radius = 0.2;
     for (int i = 0; i < 360; i++)
     {
         double x = radius * cos(i * M_PI / 180);
@@ -85,7 +85,7 @@ int render(float deltaTime)
     glLineWidth(1.0f);
     glBegin(GL_LINE_LOOP);
     glColor3f(0.77f, 0.35f, 0.06f);
-    double rad = 0.3;
+    double rad = 0.2;
     double x[360], y[360];
     for (int i = 0; i < 360; i++)
     {
@@ -93,7 +93,7 @@ int render(float deltaTime)
         x[i] = rad * cos(angle);
         y[i] = rad * sin(angle);
     }
-    for (int i = 0; i < 359; i++)
+    for (int i = 0; i < 360; i++)
     {
         setVertexRotation(x[i], y[i], SunAngle);
         setVertexRotation(x[i + 1], y[i + 1], SunAngle);
@@ -102,12 +102,12 @@ int render(float deltaTime)
 
     glBegin(GL_POLYGON);
     glColor3ub(255, 230, 153);
-    float big_radius = 0.1;
+    float big_radius = 0.08;
     for (int i = 0; i < 360; i++)
     {
         double x = big_radius * cos(i * M_PI / 180);
         double y = big_radius * sin(i * M_PI / 180);
-        setVertexRotation(x + 0.13, y + 0.13, Big_angle);
+        setVertexRotation(x + 0.08, y + 0.05, Big_angle);
     }
     glEnd();
 
@@ -117,8 +117,8 @@ int render(float deltaTime)
     for (int i = 0; i < 360; i++)
     {
         double x = small_radius * cos(i * M_PI / 180);
-        double y = small_radius * 0.3 * sin(i * M_PI / 180);
-        setVertexRotation(x + 0.008, y + 0.27, Small_angle);
+        double y = small_radius * 0.27 * sin(i * M_PI / 180);
+        setVertexRotation(x + 0.008, y + 0.17, Small_angle);
     }
     glEnd();
 
