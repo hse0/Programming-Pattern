@@ -1,0 +1,7 @@
+﻿  Lecture12-HW.cpp
+C:\Users\one\Desktop\Programming pattern\Lecture12-HW\Lecture12-HW.cpp(29,80): warning C4244: '=': '_Rep'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\one\Desktop\Programming pattern\Lecture12-HW\Lecture12-HW.cpp(29,80): warning C4244:         with
+C:\Users\one\Desktop\Programming pattern\Lecture12-HW\Lecture12-HW.cpp(29,80): warning C4244:         [
+C:\Users\one\Desktop\Programming pattern\Lecture12-HW\Lecture12-HW.cpp(29,80): warning C4244:             _Rep=__int64
+C:\Users\one\Desktop\Programming pattern\Lecture12-HW\Lecture12-HW.cpp(29,80): warning C4244:         ]
+  Lecture12-HW.vcxproj -> C:\Users\one\Desktop\Programming pattern\Lecture12-HW\x64\Debug\Lecture12-HW.exe
