@@ -2,9 +2,6 @@
 #include <chrono>
 #include <thread>
 
-// 학번 : 202127064
-// 이름 : 이지호
-
 using namespace std;
 
 int main()
