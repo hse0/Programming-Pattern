@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\one\\Desktop\\\uBC18\uC751\uD615 \uC6F9\\Lecture03-HW\\",
+  "WorkspaceRootPath": "C:\\Users\\one\\Desktop\\Programming pattern\\Lecture03-HW\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F76FCEFF-0508-4D06-85CD-9E302662387D}|Lecture03-HW.vcxproj|C:\\Users\\one\\Desktop\\\uBC18\uC751\uD615 \uC6F9\\Lecture03-HW\\Lecture03-HW.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{F76FCEFF-0508-4D06-85CD-9E302662387D}|Lecture03-HW.vcxproj|C:\\Users\\one\\Desktop\\Programming pattern\\Lecture03-HW\\Lecture03-HW.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{F76FCEFF-0508-4D06-85CD-9E302662387D}|Lecture03-HW.vcxproj|solutionrelative:Lecture03-HW.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
@@ -14,12 +14,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
@@ -32,11 +28,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Lecture03-HW.cpp",
-              "DocumentMoniker": "C:\\Users\\one\\Desktop\\\uBC18\uC751\uD615 \uC6F9\\Lecture03-HW\\Lecture03-HW.cpp",
+              "DocumentMoniker": "C:\\Users\\one\\Desktop\\Programming pattern\\Lecture03-HW\\Lecture03-HW.cpp",
               "RelativeDocumentMoniker": "Lecture03-HW.cpp",
-              "ToolTip": "C:\\Users\\one\\Desktop\\\uBC18\uC751\uD615 \uC6F9\\Lecture03-HW\\Lecture03-HW.cpp",
+              "ToolTip": "C:\\Users\\one\\Desktop\\Programming pattern\\Lecture03-HW\\Lecture03-HW.cpp",
               "RelativeToolTip": "Lecture03-HW.cpp",
-              "ViewState": "AQIAADkAAAAAAAAAAAAAAE0AAAABAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAD0AAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-03-25T12:33:25.912Z",
               "EditorCaption": ""
