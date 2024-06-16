@@ -1,0 +1,97 @@
+#include <iostream>
+#include <GLFW/glfw3.h>
+
+// 상수 정의
+const int MONITOR_REFRESH_RATE = 60; // 모니터의 새로 고침 빈도 (60Hz)
+const float TIME_PER_FRAME = 1.0f / MONITOR_REFRESH_RATE; // 한 프레임당 시간 간격 (약 16.67ms)
+
+// 게임 루프 실행 여부를 결정하는 변수
+bool gameIsRunning = true;
+
+// 예시 콜백 함수
+void onKeyPressA() {
+    std::cout << "Key 'A' Pressed!" << std::endl;
+}
+
+// 키 이벤트 콜백 등록 함수
+void registerKeyEventCallback(GLFWwindow* window) {
+    // GLFW에 키 이벤트 콜백 함수 등록
+    glfwSetKeyCallback(window, [](GLFWwindow* window, int key, int scancode, int action, int mods) {
+        if (action == GLFW_PRESS) {
+            switch (key) {
+                case GLFW_KEY_A:
+                    onKeyPressA(); // 'A' 키에 해당하는 함수 호출
+                    break;
+                // 여기에 다른 키에 대한 처리 추가 가능
+            }
+        }
+    });
+}
+
+// 게임 상태를 업데이트하는 함수
+void updateGameState() {
+    // 여기에서 실제 게임 상태 업데이트 로직을 구현합니다.
+    std::cout << "Updating Game State" << std::endl;
+}
+
+// 화면을 렌더링하는 함수
+void renderFrame() {
+    // 여기에서 실제 화면 렌더링 로직을 구현합니다.
+    std::cout << "Rendering Frame" << std::endl;
+}
+
+// 게임 루프 함수
+void gameLoop(GLFWwindow* window) {
+    // 이전 프레임 시간 저장
+    auto previousTime = std::chrono::high_resolution_clock::now();
+    float timeSinceLastFrame = 0.0f; // 마지막 프레임 이후 경과 시간
+
+    while (gameIsRunning && !glfwWindowShouldClose(window)) {
+        // 현재 시간 계산
+        auto currentTime = std::chrono::high_resolution_clock::now();
+        // 이전 시간과 현재 시간의 차이를 계산하여 deltaTime으로 저장
+        std::chrono::duration<float> deltaTime = currentTime - previousTime;
+        // 이전 시간을 현재 시간으로 업데이트
+        previousTime = currentTime;
+
+        // 키 이벤트 처리
+        glfwPollEvents();
+
+        // 프레임 업데이트 처리
+        timeSinceLastFrame += deltaTime.count(); // 경과 시간 누적
+        if (timeSinceLastFrame >= TIME_PER_FRAME) {
+            updateGameState(); // 게임 상태 업데이트 함수 호출
+            renderFrame(); // 프레임 렌더링 함수 호출
+            timeSinceLastFrame -= TIME_PER_FRAME; // 프레임 시간 감소
+        }
+
+        // CPU 과부하를 방지하기 위해 짧은 대기 시간을 둠
+        std::this_thread::sleep_for(std::chrono::microseconds(100));
+    }
+}
+
+int main() {
+    // GLFW 초기화
+    if (!glfwInit()) {
+        std::cerr << "Failed to initialize GLFW" << std::endl;
+        return -1;
+    }
+
+    // 윈도우 생성
+    GLFWwindow* window = glfwCreateWindow(800, 600, "GLFW Window", NULL, NULL);
+    if (!window) {
+        std::cerr << "Failed to create GLFW window" << std::endl;
+        glfwTerminate();
+        return -1;
+    }
+
+    // 키 이벤트 콜백 등록
+    registerKeyEventCallback(window);
+
+    // 게임 루프 함수 호출
+    gameLoop(window);
+
+    // GLFW 종료
+    glfwTerminate();
+    return 0; // 프로그램 종료
+}

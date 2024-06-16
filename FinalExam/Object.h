@@ -1,4 +1,14 @@
-#pragma once// Base class
+#pragma once
+
+#include <vector>
+#include <cstdlib>
+#include <ctime>
+#include <cmath>
+
+#ifndef M_PI
+#define M_PI 3.14159265358979323846
+#endif
+
 class Object {
 public:
     virtual void OnCollisionEnter(Object& other) {
@@ -103,6 +113,23 @@ public:
 class Star : public Object {
 public:
     void OnCollisionEnter(Object& other) override {
+    }
+
+    void draw(float centerX, float centerY, float sizeInCm) {
+        float halfSize = sizeInCm / 2.0f;
+        float angle = 72.0f * M_PI / 180.0f; // 72 degrees in radians
+        glColor3ub(255, 255, 0); // Yellow color for star
+
+        glBegin(GL_TRIANGLE_FAN);
+        glVertex2f(centerX, centerY); // Center of star
+
+        for (int i = 0; i <= 5; ++i) {
+            float x = centerX + halfSize * cos(i * 2 * angle);
+            float y = centerY + halfSize * sin(i * 2 * angle);
+            glVertex2f(x, y);
+        }
+
+        glEnd();
     }
 };
 

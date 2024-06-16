@@ -1,0 +1,41 @@
+void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods) {
+    if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS) {
+        glfwSetWindowShouldClose(window, GLFW_TRUE);
+    }
+    // 추가적인 키 이벤트 처리
+} 
+키 이벤트를 가진 콜백 선언
+
+
+while (!glfwWindowShouldClose(window)) {
+        // 현재 시간 획득
+        auto currentTime = std::chrono::high_resolution_clock::now();
+        std::chrono::duration<float> elapsedTime = currentTime - lastTime;
+        deltaTime += elapsedTime.count();
+
+        // 입력 처리 및 이벤트 폴링 (비동기적으로 이벤트를 처리)
+        // 키보드 입력을 매우 자주 폴링 (8000Hz)
+        for (int i = 0; i < 133; ++i) { // 8000 / 60 ≈ 133
+            glfwPollEvents();  // 여기서 이벤트가 발생하면 콜백 함수가 호출됨
+        }
+
+        // 게임 상태 업데이트 및 렌더링 (프레임 간격이 충분히 경과한 경우)
+        if (deltaTime >= frameDelay) {
+            update();
+            render();
+            deltaTime -= frameDelay;
+        }
+
+        // 화면 버퍼 교체
+        glfwSwapBuffers(window);
+
+        // 마지막 시간을 현재 시간으로 업데이트
+        lastTime = currentTime;
+    }
+
+    // GLFW 정리
+    glfwDestroyWindow(window);
+    glfwTerminate();
+
+    return 0;
+}

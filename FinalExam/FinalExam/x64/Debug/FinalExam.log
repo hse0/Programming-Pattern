@@ -1,11 +1,41 @@
 ﻿  main.cpp
-C:\Users\one\Desktop\프로그래밍패턴\FinalExam\packages\glfw.3.4.0\build\native\include\GLFW\glfw3.h(3235,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+C:\Users\one\Desktop\Programming pattern\FinalExam\packages\glfw.3.4.0\build\native\include\GLFW\glfw3.h(3235,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
   (소스 파일 'main.cpp'을(를) 컴파일하는 중)
   
-C:\Users\one\Desktop\프로그래밍패턴\FinalExam\Object.h(96,20): warning C4244: '인수': 'int'에서 'GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\one\Desktop\Programming pattern\FinalExam\Object.h(106,20): warning C4244: '인수': 'int'에서 'GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   (소스 파일 'main.cpp'을(를) 컴파일하는 중)
   
-C:\Users\one\Desktop\프로그래밍패턴\FinalExam\Object.h(97,20): warning C4244: '인수': 'int'에서 'GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\one\Desktop\Programming pattern\FinalExam\Object.h(107,20): warning C4244: '인수': 'int'에서 'GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   (소스 파일 'main.cpp'을(를) 컴파일하는 중)
   
-  FinalExam.vcxproj -> C:\Users\one\Desktop\프로그래밍패턴\FinalExam\x64\Debug\FinalExam.exe
+C:\Users\one\Desktop\Programming pattern\FinalExam\Object.h(120,21): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다.
+  (소스 파일 'main.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\one\Desktop\Programming pattern\FinalExam\Transform.h(20,21): warning C4244: '=': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 'main.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\one\Desktop\Programming pattern\FinalExam\Transform.h(38,29): warning C4244: '인수': 'time_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 'main.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\one\Desktop\Programming pattern\FinalExam\Transform.h(76,29): warning C4244: '인수': 'time_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 'main.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\one\Desktop\Programming pattern\FinalExam\Transform.h(78,21): warning C4244: '초기화 중': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 'main.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\one\Desktop\Programming pattern\FinalExam\Transform.h(79,21): warning C4244: '초기화 중': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 'main.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\one\Desktop\Programming pattern\FinalExam\Transform.h(80,24): warning C4244: '초기화 중': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 'main.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\one\Desktop\Programming pattern\FinalExam\Transform.h(89,38): warning C4244: '=': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 'main.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\one\Desktop\Programming pattern\FinalExam\Transform.h(90,39): warning C4244: '=': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 'main.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\one\Desktop\Programming pattern\FinalExam\Transform.h(91,63): warning C4244: '=': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 'main.cpp'을(를) 컴파일하는 중)
+  
+  FinalExam.vcxproj -> C:\Users\one\Desktop\Programming pattern\FinalExam\x64\Debug\FinalExam.exe
